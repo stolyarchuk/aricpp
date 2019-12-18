@@ -58,7 +58,7 @@ namespace aricpp
 class Client
 {
 public:
-
+    using Ptr = std::shared_ptr<Client>;
     using ConnectHandler = std::function< void(boost::system::error_code) >;
     using EventHandler = std::function< void(const JsonTree&) >;
 

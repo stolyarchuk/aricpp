@@ -48,7 +48,7 @@ namespace aricpp
 class Channel
 {
 public:
-
+    using Ptr = std::shared_ptr<Channel>;
     enum class State
     {
         down,
