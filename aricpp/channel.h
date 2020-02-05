@@ -319,6 +319,12 @@ public:
         return Proxy::Command(Method::post, std::move(query), client);
     }
 
+    Proxy& ContinueInDialplan() const
+    {
+        std::string query = "/ari/channels/" + id + "/continue";
+        return Proxy::Command(Method::post, std::move(query), client);
+    }
+
     ProxyPar<std::string>& GetVar(const std::string& var) const
     {
         const std::string query = "/ari/channels/"+id+"/variable";
